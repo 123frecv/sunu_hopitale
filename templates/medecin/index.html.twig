@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% block container %}
+<table class="table table-bordered">
+    <thead>
+      <tr>
+         <th scope="col">Matricule</th> 
+         <th scope="col">Prenom</th>
+         <th scope="col">Nom</th>
+         <th scope="col"></th>
+         <th scope="col">Telephone</th>
+         <th scope="col">Service</th>
+         
+         
+      </tr>  
+    </thead>
+    <tbody>
+        <tr>
+            {% for medecin in medecins %}
+            <td>{{ medecin.matricule }}</td>
+            <td>{{ medecin.prenom }}</td>
+            <td>{{ medecin.nom }}</td>
+            
+            <td>{{ medecin.tel }}</td>
+            <td>{{ medecin.service }}</td>
+            
+            {% endfor %}
+            </tr>
+    </tbody>
+</table>
+{% endblock %}
+{% endblock %}
